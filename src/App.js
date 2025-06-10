@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import GradientForm from './components/GradientForm';
+import ResultDisplay from './components/ResultDisplay';
+import { calcularGradiente } from './utils/gradientCalculator';
 import './App.css';
 
 function App() {
+  const [resultado, setResultado] = useState(null);
+  const [tipoCalculo, setTipoCalculo] = useState('');
+
+  const handleCalcular = (datos) => {
+    const res = calcularGradiente(datos);
+    setResultado(res);
+    setTipoCalculo(datos.calculo);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GradientForm onCalculate={handleCalcular} />
+      <ResultDisplay resultado={resultado} tipo={tipoCalculo} />
     </div>
   );
 }
 
 export default App;
+

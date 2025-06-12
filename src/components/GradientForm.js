@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './GradientForm.css'; // si deseas separar estilos
+/* import './GradientForm.css';  */// si deseas separar estilos
 
 const GradientForm = ({ onCalculate }) => {
   const [form, setForm] = useState({

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/gradiente-aritmetico/static/css/main.b1b14945.css",
+    "main.js": "/gradiente-aritmetico/static/js/main.bd3feaa6.js",
+    "index.html": "/gradiente-aritmetico/index.html",
+    "main.b1b14945.css.map": "/gradiente-aritmetico/static/css/main.b1b14945.css.map",
+    "main.bd3feaa6.js.map": "/gradiente-aritmetico/static/js/main.bd3feaa6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1b14945.css",
+    "static/js/main.bd3feaa6.js"
+  ]
+}

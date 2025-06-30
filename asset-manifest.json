@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/gradiente-aritmetico/static/css/main.b1b14945.css",
-    "main.js": "/gradiente-aritmetico/static/js/main.b427f1ab.js",
+    "main.js": "/gradiente-aritmetico/static/js/main.cadc3755.js",
     "index.html": "/gradiente-aritmetico/index.html",
     "main.b1b14945.css.map": "/gradiente-aritmetico/static/css/main.b1b14945.css.map",
-    "main.b427f1ab.js.map": "/gradiente-aritmetico/static/js/main.b427f1ab.js.map"
+    "main.cadc3755.js.map": "/gradiente-aritmetico/static/js/main.cadc3755.js.map"
   },
   "entrypoints": [
     "static/css/main.b1b14945.css",
-    "static/js/main.b427f1ab.js"
+    "static/js/main.cadc3755.js"
   ]
 }

@@ -1,21 +1,22 @@
 export function calcularGradiente({ tipo, A1, G, n, i, calculo }) {
   const A = A1;
-  const factor = Math.pow(1 + i, n);
+  const powNegN = Math.pow(1 + i, -n);
+  const powPosN = Math.pow(1 + i, n);
+  const signo = tipo === 'creciente' ? 1 : -1;
 
-  const valorPresente =
-    A * ((factor - 1) / (i * factor)) +
-    (tipo === 'creciente'
-      ? G * ((factor - i * n - 1) / (i * i * factor))
-      : -G * ((factor - i * n - 1) / (i * i * factor)));
+  // Valor Presente
+  const VP =
+    A * ((1 - powNegN) / i) +
+    signo * (G / i) * (((1 - powNegN) / i) - (n / powPosN));
 
-  const valorFuturo =
-    A * ((factor - 1) / i) +
-    (tipo === 'creciente'
-      ? G * ((factor - i * n - 1) / (i * i))
-      : -G * ((factor - i * n - 1) / (i * i)));
+  // Valor Futuro
+  const VF =
+    A * ((powPosN - 1) / i) +
+    signo * (G / i) * (((powPosN - 1) / i) - n);
 
-  return calculo === 'valor_presente' ? valorPresente : valorFuturo;
+  return calculo === 'valor_presente' ? VP : VF;
 }
+
 
 export function calcularPeriodo({ tipo, A1, G, i, valorObjetivo, tipoDeCalculoObjetivo }) {
   // Aseguramos que la tasa de interés sea decimal

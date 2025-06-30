@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Cálculo de Gradiente Aritmético</h1>
+      <h1>SISTEMAS ECONOMICOS Feria Ecosist 1-2025 <br /> Grupo 4</h1>
       <GradientForm onCalculate={handleCalculate} />
       <ResultDisplay resultado={resultado} tipo={tipoCalculo} />
     </div>
